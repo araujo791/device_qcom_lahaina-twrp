@@ -230,7 +230,7 @@ TW_INCLUDE_FASTBOOTD := true
 TW_DEVICE_VERSION :=Cov GT2
 USE_RECOVERY_INSTALLER := true
 RECOVERY_INSTALLER_PATH := device/qcom/lahaina/installer
-TW_OZIP_DECRYPT_KEY := 0000 # Ozip Flashing Support ( Untested )
+#TW_OZIP_DECRYPT_KEY := 0000 # Ozip Flashing Support ( Untested )
 
 ALLOW_MISSING_DEPENDENCIES := true
 
