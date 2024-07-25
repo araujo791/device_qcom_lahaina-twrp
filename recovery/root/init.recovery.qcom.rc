@@ -37,6 +37,20 @@ on fs
     chown system system /dev/ion
     install_keyring
 
+    #Update from OTA package#
+service unified-script /system/bin/unified-script.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+on boot
+    start unified-script
+    chmod 0777 /system/bin/unified-script.sh
+
+#Update from OTA package#
+
 on early-fs
     write /proc/sys/kernel/sched_lib_name "magiskboot,recovery,Updater,updater,update_engine_sideload"
     write /proc/sys/kernel/sched_lib_mask_force 255
